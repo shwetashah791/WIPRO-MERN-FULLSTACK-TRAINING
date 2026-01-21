@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shweta Kumari Shah | Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+          background: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            ),
+            url("download (3).jpg"); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-right: 30px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header-text p {
+            margin-top: 8px;
+            font-size: 18px;
+            color: #d1d5db;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #374151;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        
+        /* Sections */
+        section {
+            background-color: rgb(167, 208, 215);
+            margin: 25px auto;
+            padding: 30px;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1f2933;
+            text-align: center;
+        }
+
+        /* Projects */
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            width: 260px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #dae8ed;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .project-card p {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #1f2933;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-pic {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="ShwetaShah_photo.jpg" alt="Shweta Kumari Shah" class="profile-pic">
+        <div class="header-text">
+            <h1>Shweta Kumari Shah</h1>
+            <p>Computer Science Engineering Student | Web Developer</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center;">
+        I am a Computer Science Engineering student passionate about web development,
+        problem-solving, and creating impactful applications. I have strong knowledge
+        of C, C++, Python, JavaScript, SQL, and web technologies such as HTML, CSS,
+        and Bootstrap. I enjoy building responsive and user-friendly applications.
+    </p>
+</section>
+
+<section id="video">
+    <h2>My Work / Demo Video</h2>
+    <div style="text-align:center; margin-top:20px;">
+        <video width="80%" controls>
+            <source src="demo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <p style="text-align:center;">
+        HTML • CSS • JavaScript • Java • Python • SQL • Bootstrap
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+        <div class="project-card">
+            <img src="download.jpg" alt="PG Life">
+            <p>PG Life</p>
+        </div>
+
+        <div class="project-card">
+            <img src="download (1).jpg" alt="Fashion Recommendation System">
+            <p>Fashion Recommendation System</p>
+        </div>
+
+        <div class="project-card">
+            <img src="download (2).jpg" alt="Stock Market Prediction">
+            <p>Stock Market Prediction</p>
+        </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+        📧 Email: shwetakumarishah@gmail.com <br>
+        🔗 LinkedIn: linkedin.com/in/shweta-kumari-shah <br>
+        💻 GitHub: github.com/shweta-shah
+    </p>
+</section>
+
+<footer>
+    <p> Shweta Kumari Shah</p>
+</footer>
+
+</body>
+</html>
