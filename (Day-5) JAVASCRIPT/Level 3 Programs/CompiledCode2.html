@@ -1,0 +1,108 @@
+<!-- Do the same operations for product json data 
+
+
+ const jsonData= `[
+            {"item" : "Laptop" , "price" : 60000},
+            {"item" : "Mouse" , "price" : 500},
+            {"item" : "Keyboard" , "price" : 700},
+            {"item" : "Speaker" , "price" : 5000}
+    ]`; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product DATA</title>
+    <style>
+        body { font-family: Arial; }
+        button { margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+<h3>Product Management Operations</h3>
+
+<button onclick="fetchProducts()">Fetch Products</button>
+<button onclick="addProduct()">Add Product</button>
+<button onclick="updateProduct()">Update Product</button>
+<button onclick="deleteProduct()">Delete Product</button>
+
+<ul id="products"></ul>
+
+<script>
+    let jsonData = `[
+        {"item":"Laptop","price":60000},
+        {"item":"Mouse","price":500},
+        {"item":"Keyboard","price":700},
+        {"item":"Speaker","price":5000}
+    ]`;
+    let products = JSON.parse(jsonData);
+
+    const ul = document.getElementById("products");
+
+    function fetchProducts() {
+        ul.innerHTML = ""; 
+        products.forEach((product, index) => {
+            const li = document.createElement("li");
+            li.textContent = `ID: ${index} | Item: ${product.item} | Price: ₹${product.price}`;
+            ul.appendChild(li);
+        });
+    }
+
+    function addProduct() {
+        const item = prompt("Enter the product name");
+        const price = prompt("Enter the product price");
+
+        const newProduct = {
+            item: item,
+            price: Number(price)
+        };
+
+        products.push(newProduct);
+
+        jsonData = JSON.stringify(products);
+
+        alert(" The Product is added successfully");
+        fetchProducts();
+    }
+
+    function updateProduct() {
+        const id = prompt("Enter the product ID to update");
+
+        if (products[id]) {
+            const newItem = prompt("Enter the new product name");
+            const newPrice = prompt("Enter  the new price");
+
+            products[id] = {
+                item: newItem,
+                price: Number(newPrice)
+            };
+
+            jsonData = JSON.stringify(products);
+
+            alert(" The Product is updated successfully");
+            fetchProducts();
+        } else {
+            alert("Invalid Product ID");
+        }
+    }
+    
+    function deleteProduct() {
+        const id = prompt("Enter the product ID to delete");
+
+        if (products[id]) {
+            products.splice(id, 1);
+
+            jsonData = JSON.stringify(products);
+
+            alert(" The Product is deleted successfully");
+            fetchProducts();
+        } else {
+            alert("Invalid Product ID");
+        }
+    }
+</script>
+
+</body>
+</html>
