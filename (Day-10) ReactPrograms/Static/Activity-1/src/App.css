@@ -1,0 +1,87 @@
+/* App.css */
+
+/* Page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #646289, #57879d);
+  height: 100vh;
+}
+
+/* Center the form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card style */
+.card {
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Input focus */
+.form-control:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.25);
+}
+
+/* Error text */
+.text-danger {
+  color: #ff4d4d;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: #6c63ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Button hover */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Success message */
+.alert-success {
+  margin-top: 15px;
+  text-align: center;
+  padding: 10px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+}
