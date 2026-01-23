@@ -1,5 +1,4 @@
 import React from "react";
-
 function Admin() {
   return (
     <div style={{ padding: "40px", textAlign: "center" }}>
