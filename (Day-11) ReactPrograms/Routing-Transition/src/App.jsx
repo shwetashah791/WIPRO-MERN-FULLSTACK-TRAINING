@@ -5,10 +5,12 @@ import './App.css'
 import AnimatedRoutes from './components/AnimatedRoutes'
 import {Link} from 'react-router-dom'
 import Login from './pages/Login'
-import { employeeSchema } from './forms/ValidationSchema'
-import ValidationSchema from "./forms/ValidationSchema";
+import EmployeeForm from "./forms/EmployeeForm";
 
+//import { employeeSchema } from './forms/ValidationSchema'
+//import { employeeSchema } from "./ValidationSchema";
 
+//import ValidationSchema from "./forms/ValidationSchema";
 
 import {ProtectedAdminPage , ProtectedCoursesPage,ProtectedEmployeePage} from '../src/pages/ProtectedPages'
 function App() {
@@ -30,7 +32,7 @@ function App() {
         <ProtectedAdminPage/>
         <ProtectedCoursesPage />
         <EmployeeForm/>
-        <ValidationSchema/>
+    
       
     </>
   )
