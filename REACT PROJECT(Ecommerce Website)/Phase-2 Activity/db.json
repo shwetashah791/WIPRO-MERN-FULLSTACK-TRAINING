@@ -1,0 +1,90 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Men Casual T-Shirt",
+      "price": 3000,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Men Hoodie",
+      "price": 5000,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Men Formal Shirt",
+      "price": 4500,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1520975849377-1d0f8f3d3e12?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 3,
+      "title": "Men Jeans",
+      "price": 3200,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Men Jacket",
+      "price": 7000,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1520975684297-1f8a9bcb8b6c?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 6,
+      "title": "Women Casual Top",
+      "price": 2800,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1520975691392-9d1b1bcb8b6c?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 8,
+      "title": "Women Skirt",
+      "price": 3500,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1520975701577-5d0a7bcb8b6e?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 9,
+      "title": "Women Jacket",
+      "price": 7500,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1520975711971-1d0a7bcb8b6f?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 10,
+      "title": "Women Handbag",
+      "price": 4200,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1520975723474-2d0a7bcb8b70?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "title": "pant",
+      "price": "7000",
+      "img": "",
+      "category": "Men",
+      "id": 11
+    },
+    {
+      "title": "outer",
+      "price": "7000",
+      "img": "",
+      "category": "Men",
+      "id": 12
+    }
+  ],
+  "cart": [
+    {
+      "id": 9,
+      "title": "Women Jacket",
+      "price": 7500,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1520975711971-1d0a7bcb8b6f?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}
