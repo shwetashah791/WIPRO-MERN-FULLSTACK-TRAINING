@@ -1,0 +1,63 @@
+.inventory-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.title {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.stock-box {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #89a7ac;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.stock-count {
+  font-size: 22px;
+  color: #444;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.add-btn {
+  background-color: #2e9acc;
+  color: #fff;
+}
+
+.remove-btn {
+  background-color: #e1594a;
+  color: #fff;
+}
+
+.remove-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

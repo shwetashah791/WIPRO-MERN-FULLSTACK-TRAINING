@@ -1,0 +1,1 @@
+Create two components employee and employeelist(name ,role) and display the name and role with the event button which will display the name of employee if he is promoted
