@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Men Casual T-Shirt",
+      "price": 30,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Women Party Dress",
+      "price": 70,
+      "category": "Women",
+      "img": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Men Hoodie",
+      "price": 50,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "title": "Man shirt",
+      "price": "$60",
+      "img": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=80",
+      "id": 6
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "Men Casual T-Shirt",
+      "price": 30,
+      "category": "Men",
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}
