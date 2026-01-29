@@ -22,7 +22,7 @@ export default function AdminLogin() {
         onSubmit={(values) => {
           if (values.email === "admin@gmail.com" && values.password === "admin123") {
             localStorage.setItem("adminLoggedIn", "true");
-            navigate("/products"); // ✅ after login navigate to Products
+            navigate("/products"); //  after login navigate to Products
           } else {
             alert("❌ Invalid Admin Credentials");
           }
