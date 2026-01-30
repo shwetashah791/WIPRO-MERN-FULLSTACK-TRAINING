@@ -1,0 +1,177 @@
+DAY-2 Practice question
+
+Dataset
+Table 1: Employees
+CREATE TABLE Employees (
+    emp_id INT,
+    emp_name VARCHAR(50),
+    dept_id INT,
+    manager_id INT
+);
+INSERT INTO Employees VALUES
+(1, 'Amit', 10, NULL),
+(2, 'Riya', 20, 1),
+(3, 'Karan', 10, 1),
+(4, 'Sneha', 30, 2),
+(5, 'Rahul', NULL, 2);
+
+Table 2: Departments
+CREATE TABLE Departments (
+    dept_id INT,
+    dept_name VARCHAR(50)
+);
+INSERT INTO Departments VALUES
+(10, 'IT'),
+(20, 'HR'),
+(40, 'Finance');
+--------------------- Join Activities------------------
+ INNER JOIN
+ Activity:
+Display employees who belong to a department.
+ LEFT JOIN (Left Outer Join)
+ Activity:
+Display all employees even if they don’t belong to any department.
+ RIGHT JOIN (Right Outer Join)
+Activity:
+Display all departments even if no employee works in them.
+ FULL JOIN (Full Outer Join)
+ Activity:
+Display all employees and all departments, whether matched or not.
+ SELF JOIN
+ Activity:
+Display employees and their managers.
+ CROSS JOIN
+ Activity:
+Generate all possible employee–department combinations.
+
+
+mysql> CREATE TABLE Employees ( emp_id INT, emp_name VARCHAR(50), dept_id INT, manager_id INT );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> INSERT INTO Employees VALUES (1, 'Amit', 10, NULL), (2, 'Riya', 20, 1), (3, 'Karan', 10, 1), (4, 'Sneha', 30, 2), (5, 'Rahul', NULL, 2);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Departments ( dept_id INT, dept_name VARCHAR(50) ); INSERT INTO Departments VALUES (10, 'IT'), (20, 'HR'), (40, 'Finance');
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> desc employees;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| emp_id     | int         | YES  |     | NULL    |       |
+| emp_name   | varchar(50) | YES  |     | NULL    |       |
+| dept_id    | int         | YES  |     | NULL    |       |
+| manager_id | int         | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc department;
+ERROR 1146 (42S02): Table 'dep.department' doesn't exist
+mysql> desc departments;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| dept_id   | int         | YES  |     | NULL    |       |
+| dept_name | varchar(50) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+
+mysql> select * from employees;
++--------+----------+---------+------------+
+| emp_id | emp_name | dept_id | manager_id |
++--------+----------+---------+------------+
+|      1 | Amit     |      10 |       NULL |
+|      2 | Riya     |      20 |          1 |
+|      3 | Karan    |      10 |          1 |
+|      4 | Sneha    |      30 |          2 |
+|      5 | Rahul    |    NULL |          2 |
++--------+----------+---------+------------+
+5 rows in set (0.00 sec)
+
+
+mysql> select * from departments;
++---------+-----------+
+| dept_id | dept_name |
++---------+-----------+
+|      10 | IT        |
+|      20 | HR        |
+|      40 | Finance   |
++---------+-----------+
+3 rows in set (0.00 sec)
+
+
+mysql> SELECT E.emp_name, D.dept_name
+    -> FROM Employees E INNER JOIN Departments D
+    -> ON E.dept_id = D.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Amit     | IT        |
+| Riya     | HR        |
+| Karan    | IT        |
++----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT E.emp_name, D.dept_name FROM Employees E LEFT JOIN Departments D ON E.dept_id = D.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Amit     | IT        |
+| Riya     | HR        |
+| Karan    | IT        |
+| Sneha    | NULL      |
+| Rahul    | NULL      |
++----------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT E.emp_name, D.dept_name FROM Employees E RIGHT JOIN Departments D ON E.dept_id = D.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Karan    | IT        |
+| Amit     | IT        |
+| Riya     | HR        |
+| NULL     | Finance   |
++----------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT E.emp_name, M.emp_name AS manager FROM Employees E LEFT JOIN Employees M ON E.manager_id = M.emp_id;
++----------+---------+
+| emp_name | manager |
++----------+---------+
+| Amit     | NULL    |
+| Riya     | Amit    |
+| Karan    | Amit    |
+| Sneha    | Riya    |
+| Rahul    | Riya    |
++----------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT E.emp_name, D.dept_name FROM Employees E CROSS JOIN Departments D;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Amit     | Finance   |
+| Amit     | HR        |
+| Amit     | IT        |
+| Riya     | Finance   |
+| Riya     | HR        |
+| Riya     | IT        |
+| Karan    | Finance   |
+| Karan    | HR        |
+| Karan    | IT        |
+| Sneha    | Finance   |
+| Sneha    | HR        |
+| Sneha    | IT        |
+| Rahul    | Finance   |
+| Rahul    | HR        |
+| Rahul    | IT        |
++----------+-----------+
+15 rows in set (0.00 sec)
+
+
